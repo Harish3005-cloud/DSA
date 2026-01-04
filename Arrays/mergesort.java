@@ -35,7 +35,7 @@ public class mergesort {
             for(int i=0, j=si;i<merger.length;i++,j++){
        
                 arr[j]=merger[i];
-       6
+       
             }
 
 

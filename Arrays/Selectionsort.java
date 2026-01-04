@@ -5,16 +5,16 @@ import java.util.*;
 public class Selectionsort {
     public void selection(int arr[], int n) {
         for (int i = 0; i < n; i++) {
-            int temp = i;
+            int min = i;
             for (int j = i + 1; j < n; j++) {
-                if (arr[temp] > arr[j]) {
-                    temp = j;
+                if (arr[min] > arr[j]) {
+                    min = j;
                 }
 
             }
-            int temp1 = arr[i];
-            arr[i] = arr[temp];
-            arr[temp] = temp1;
+            int temp = arr[i];
+            arr[i] = arr[min];
+            arr[min] = temp;
         }
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i]);
