@@ -1,4 +1,4 @@
-package Arrays;
+
 import java.util.*;
 public class quicksort {
     static int partition(int a[],int l,int r){

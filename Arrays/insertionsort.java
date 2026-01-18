@@ -1,10 +1,11 @@
-package Arrays;
+// package Arrays;
 import java.util.*;
 public class insertionsort {
     public void insertion(int arr[],int n){
         for(int i=1;i<n;i++){
             int curr=arr[i];
             int j=i-1;
+            //  for DESC while(j>=0 && curr>arr[j]){
             while(j>=0 && curr<arr[j]){
                 arr[j+1]=arr[j];
                 j--;
