@@ -13,6 +13,7 @@ public class stack {
             System.out.println(s.peek());
             s.pop();
         }
+        System.out.println(s.size());
 
     }
 }

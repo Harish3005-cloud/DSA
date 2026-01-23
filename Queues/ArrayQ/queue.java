@@ -1,5 +1,4 @@
 package Queues.ArrayQ;
-
 import java.util.*;
 
 public class queue {
@@ -12,10 +11,11 @@ public class queue {
             arr = new int[n];
             this.size = n;
         }
-
+        // Base-CaseCheck(True/False)
         public static boolean isEmpty() {
             return rear == -1;
         }
+        
         public static void add(int data){
             if(rear==size-1){
                 System.out.println("Queue is full");
@@ -49,11 +49,14 @@ public class queue {
         q.add(1);
         q.add(2);
         q.add(3);
+        q.add(4);
+        q.add(5);
         while(!q.isEmpty()){
 
             System.out.println(q.peek());
             q.remove();
         }
+        
 
 
 
