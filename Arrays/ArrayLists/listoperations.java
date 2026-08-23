@@ -1,4 +1,4 @@
-package Arrays.ArrayLists;
+package ArrayLists;
 import java.util.*;
 public class listoperations {
     public static void main(String[]args){

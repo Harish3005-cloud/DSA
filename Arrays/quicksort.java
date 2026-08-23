@@ -1,48 +1,54 @@
-
 import java.util.*;
-public class quicksort {
-    static int partition(int a[],int l,int r){
-        int pivot=a[l];
-        int i=l-1;
-        int j=r+1;
+public class quicksort{
+    static int partition(int a[],int low,int high){
+        int pivot=a[low],temp ,i=low+1,j=high;
         while(true){
-            do{
+            while(i<=high && a[i]<=pivot){
                 i++;
-            }while(a[i]<pivot);
-            do{
+            }
+            while(j>=low && a[j]>pivot){
                 j--;
-            }while(a[j]>pivot);
-            if(i>=j) 
+            }
+            if(i<j){
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            } else {
+                temp=a[low];
+                a[low]=a[j];
+                a[j]=temp;
                 return j;
-            int temp=a[i];
-            a[i]=a[j];
-            a[j]=temp;
+            }
         }
     }
-    static void quicksort1(int a[],int l,int r){
-        if(l<r){
-            int s=partition(a, l, r);
-            quicksort1(a, l, s);
-            quicksort1(a, s+1, r);
-        }
+static void sort(int a[],int low,int high ){
+    int j;
+    if(low < high){
+        j=partition(a, low, high);
+        sort(a,low,j-1);
+        sort(a,j+1,high);    
     }
-    public static void main(String[]args){
-        int n;
+
+
+
+}
+    public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        System.out.println("Enter the size of the array: ");
+        int n;
+     
+        System.out.println("Enter the length of the array : ");
         n=sc.nextInt();
-        int arr[]=new int[n];
-        System.out.println("Enter the array elements:");
+        int a[]=new int[n];
+        System.out.println("Enter the array elements: \n");
         for(int i=0;i<n;i++){
-            arr[i]=sc.nextInt();
+            a[i]=sc.nextInt();
         }
-        System.out.println("\n---QuickSorting....---\n");
-        quicksort1(arr, 0, n-1);
-          System.out.println("The sorted elements are:");
+        System.out.println("Sorting .....");
+        sort(a,0,n-1);
+        System.out.println("After Sorting: \n");
         for(int i=0;i<n;i++){
-           System.out.print(arr[i]);
+            System.out.println(a[i]+" ");
         }
-        System.out.println();
-        sc.close();
     }
+
 }

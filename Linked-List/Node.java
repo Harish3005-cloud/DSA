@@ -1,4 +1,4 @@
-import java.util.*;
+// import java.util.*;
 
 public class Node {
     int data;
@@ -35,7 +35,7 @@ public class Node {
         head.next.next = new Node(30);
         head.next.next.next = new Node(40);
         traverslist(head);
-        getSize();
+       
 
     }
 }

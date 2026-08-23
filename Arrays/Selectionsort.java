@@ -5,7 +5,7 @@ public class Selectionsort {
         for (int i = 0; i < n; i++) {
             int min = i;
             for (int j = i + 1; j < n; j++) {
-                //  For DESC --> if (arr[min] < arr[j]) {
+                
                 if (arr[min] > arr[j]) {
                     min = j;
                 }
